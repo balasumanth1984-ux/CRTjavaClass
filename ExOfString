@@ -1,0 +1,24 @@
+public class ExOfString{
+    public static void main(String[] args){
+       /* String t = new String("Rohitha");
+        System.out.println(s);
+        
+        s.concat("sunny");
+        System.out.println(s);*/
+
+
+       /* StringBuffer sb = new StringBuffer("Rohitha");
+        System.out.println(sb);
+        sb.append("sunny");
+        System.out.println(sb);*/
+
+
+        StringBuilder sb = new StringBuilder("Rohitha");
+        System.out.println(sb);
+
+        sb.append("sunny");
+        System.out.println(sb);
+
+
+    }
+}
