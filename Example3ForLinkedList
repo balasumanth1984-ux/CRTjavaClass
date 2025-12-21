@@ -1,0 +1,48 @@
+import java.util.LinkedList;
+
+class Car
+{
+	private String carName;
+	private String carColour;
+	
+	public Car(String carName, String carColour) {
+		super();
+		this.carName = carName;
+		this.carcolour = carColour;
+		
+	}
+	public String getCarName() {
+		return carName;
+	}
+	public String getCarColour() {
+		return carColour;
+	}
+	@Override
+	public String to String() {
+		return "Employee [carName=" + carName + ", carColour=" + carColour + "]";
+	}
+	
+	
+}
+
+public class Example3ForLinkedList { 
+	
+	public static void main(String[] args) {
+		
+		Car c1 = new Car("audi","purple");
+		Car c2 = new Car("bmw","pink");
+		
+		LinkedList<Employee> ll = new LinkedList<Employee>();
+		ll.add(c1);
+		ll.add(c2);
+		
+		for(Object Obj : ll)
+		{
+			System.out.println(Obj);
+		}
+
+
+		
+	}
+
+}
