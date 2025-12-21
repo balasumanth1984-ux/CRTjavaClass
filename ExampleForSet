@@ -1,0 +1,22 @@
+import java.util.*;
+public class ExampleForSet{
+    public static void main(String[] args){
+        Hashset hs = new Hashset();
+        hs.add(10);
+        hs.add("Java");
+        hs.add("Python");
+        System.out.println(hs);
+        System.out.println("------------------------------");
+        System.out.println(hs.Size());
+        System.out.println("------------------------------");
+        System.out.println(hs.isEmpty());
+        System.out.println("------------------------------");
+        System.out.println(hs.isclone());
+        for(Object e : hs)
+        {
+            System.out.println(e);
+        }
+
+
+    }
+}
