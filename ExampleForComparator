@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+// Name Comparator
+class NameComparator implements Comparator<Student1> {
+    public int compare(Student1 s1, Student1 s2) {
+        return s1.getName().compareTo(s2.getName());
+    }
+}
+
+// Roll Number Comparator
+class RollNoComparator implements Comparator<Student1> {
+    public int compare(Student1 s1, Student1 s2) {
+        return s1.getRollNo().compareTo(s2.getRollNo());
+    }
+}
+class Student1 {
+    private String rollNo;
+    private String name;
+
+    public Student1(String rollNo, String name) {
+        this.rollNo = rollNo;
+        this.name = name;
+    }
+
+    public String getRollNo() {
+        return rollNo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String toString() {
+        return "Student[rollNo=" + rollNo + ", name=" + name + "]";
+    }
+}
+public class ExampleForComparator {
+    public static void main(String[] args) {
+
+        Student1 s1 = new Student1("12345", "Thanusree");
+        Student1 s2 = new Student1("98765", "Likitha");
+        Student1 s3 = new Student1("80158", "Gomathi");
+
+        ArrayList<Student1> al = new ArrayList<>();
+
+        al.add(s1);
+        al.add(s2);
+        al.add(s3);
+
+        Collections.sort(al, new NameComparator());
+
+        for (Student1 s : al) {
+            System.out.println(s);
+        }
+    }
+}
